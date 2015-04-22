@@ -1,0 +1,33 @@
+//
+//  PrefixHeader.pch
+//  kuaixiao
+//
+//  Created by 邹克鹏 on 14/11/19.
+//  Copyright (c) 2014年 邹克鹏. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import"Const.h"
+#import"CustomTabBarController.h"
+#import"MyNavigationBar.h"
+#import"AFHTTPRequestOperationManager.h"
+#import"KuaiXiaoTool.h"
+#import "AppUtiles.h"
+#import "CommonHandler.h"
+#import "UserDefaultsUtils.h"
+#import "NetWorkUtil.h"
+#endif
+
+#ifdef DEBUG
+# define CLog(format, ...) NSLog((@"[文件名:%s]" "[函数名:%s]" "[行号:%d]" format), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define CLog(...);
+#endif
